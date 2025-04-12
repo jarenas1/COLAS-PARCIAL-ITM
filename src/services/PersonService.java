@@ -123,11 +123,16 @@ public class PersonService implements IPersonService {
             int edad = sc.nextInt();
             sc.nextLine();
             System.out.println("Ingrese 1 si la persona es desplazada, si no, ingrese 2");
+
             while (!sc.hasNextInt()) {
                 System.out.println("El dato ingresado no es numerico por favor revise o valide");
                 sc.next();
             }
             int desplazado = sc.nextInt();
+            while (desplazado < 1 || desplazado > 2) {
+                System.out.println("debe ingresa una opcion de 1 a 2");
+                desplazado = sc.nextInt();
+            }
             sc.nextLine();
             System.out.println("Ingrese el estrado de la persona");
             while (!sc.hasNextInt()) {
@@ -152,6 +157,10 @@ public class PersonService implements IPersonService {
                 sc.next();
             }
             int opt = sc.nextInt();
+            while (opt < 1 || opt > 2) {
+                System.out.println("debe ingresa una opcion de 1 a 2");
+                opt = sc.nextInt();
+            }
             sc.nextLine();
             if (opt == 2){
                 bandera = false;
@@ -223,6 +232,10 @@ public class PersonService implements IPersonService {
                                     sc.next();
                                 }
                                 int desplazado = sc.nextInt();
+                                while (desplazado < 1 || desplazado > 2) {
+                                    System.out.println("debe ingresa una opcion de 1 a 2");
+                                    desplazado = sc.nextInt();
+                                }
                                 sc.nextLine();
                                 p.setEsDesplazado(desplazado == 1);
                                 break;
@@ -261,6 +274,10 @@ public class PersonService implements IPersonService {
                 sc.next();
             }
             int opt = sc.nextInt();
+            while (opt < 1 || opt > 2) {
+                System.out.println("debe ingresa una opcion de 1 a 2");
+                opt = sc.nextInt();
+            }
             sc.nextLine();
             if (opt == 2){
                 bandera = false;
